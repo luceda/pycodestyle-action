@@ -8,4 +8,6 @@ LABEL "com.github.actions.color"="6f42c1"
 RUN pip install --upgrade pip
 RUN pip install pycodestyle
 
-CMD ["pycodestyle", "/github/workspace/"]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
