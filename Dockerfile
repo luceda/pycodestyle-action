@@ -9,3 +9,6 @@ RUN pip install --upgrade pip
 RUN pip install pycodestyle
 
 CMD ["pycodestyle", "/github/workspace/"]
+
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
